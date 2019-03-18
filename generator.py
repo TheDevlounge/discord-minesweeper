@@ -72,6 +72,6 @@ def to_dc_spoilers(grid):
 if __name__ == "__main__":
 
 
-    grid = generate()
+    grid = generate(5, 5, 3)
 
     print(to_dc_spoilers(grid))

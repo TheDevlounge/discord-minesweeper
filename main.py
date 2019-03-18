@@ -40,9 +40,9 @@ async def help(ctx, *args):
 
 
 @bot.command(pass_context=True)
-async def play(ctx, x:int,y:int,m:int, *args):
+async def play(ctx, x:int=9,y:int=9,m:int=10, *args):
     try:
-        grid = generate(x,y,m)
+        grid = generate(int(x),int(y),int(m))
 
         str0 = to_dc_spoilers(grid)
         str0 = ctx.message.author.mention + " here is your mine field :triangular_flag_on_post: \n" + str0
