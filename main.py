@@ -12,14 +12,14 @@ bot = Bot(description="Minesweeper", command_prefix="mine ", pm_help=False)
 
 @bot.event
 async def on_ready():
-    print('Logged in as ' + bot.user.name + ' (ID:' + bot.user.id + ') | Connected to ' + str(
-        len(bot.servers)) + ' servers | Connected to ' + str(len(set(bot.get_all_members()))) + ' users')
-    print('--------')
+    # print('Logged in as ' + bot.user.name + ' (ID:' + bot.user.id + ') | Connected to ' + str(
+    #     len(bot.servers)) + ' servers | Connected to ' + str(len(set(bot.get_all_members()))) + ' users')
+    # print('--------')
     print('Use this link to invite {}:'.format(bot.user.name))
     print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=0'.format(bot.user.id))
     print('--------')
 
-    return await bot.change_presence(game=discord.Game(name='With human lives'))
+    #return await bot.change_presence(game=discord.Game(name='With human lives'))
 
 def getErr(e):
     str0 = "{} at line {} [{}]".format(str(e), sys.exc_info()[-1].tb_lineno, type(e).__name__)
